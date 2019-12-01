@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="chose">
+        <item>老师</item>
+        <item>学生</item>
+    </string-array>
+    <string-array name="school">
+        <item>哈尔滨工业大学</item>
+        <item>其他学校暂未开放</item>
+    </string-array>
+    <string-array name="college">
+        <item>计算机学院</item>
+        <item>经管学院</item>
+        <item>环境学院</item>
+        <item>马克思学院</item>
+    </string-array>
+    <string-array name="shenfen">
+        <item>老师</item>
+        <item>学生</item>
+    </string-array>
+    <string-array name="pages">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="course">
+        <item>课程类别</item>
+        <item>英语</item>
+    </string-array>
+    <string-array name="kind">
+        <item>试题类型</item>
+        <item>选择</item>
+    </string-array>
+</resources>

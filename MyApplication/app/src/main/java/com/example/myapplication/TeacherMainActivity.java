@@ -14,6 +14,7 @@ public class TeacherMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_main);
+        MainActivity.instance.finish();
         ImageButton imageButton1 = (ImageButton)findViewById(R.id.imageButton1);
         imageButton1.setOnClickListener(new View.OnClickListener( ){
             @Override

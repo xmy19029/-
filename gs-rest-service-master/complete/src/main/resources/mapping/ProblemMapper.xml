@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.ProblemMapper">
+    <insert id="addProblem" parameterType="com.example.entity.Problem">
+        INSERT INTO `teachingassistant`.`problems` (`textMain`, `textA`, `textB`, `textC`, `textD`, `isA`, `isB`, `isC`, `isD`) VALUES (#{textMain}, #{textA} , #{textB}, #{textC}, #{textD}, #{isA}, #{isB}, #{isC}, #{isD});
+    </insert>
+
+    <select id="getAllProblems" resultType="com.example.entity.Problem">
+        SELECT * FROM teachingassistant.problems;
+    </select>
+</mapper>

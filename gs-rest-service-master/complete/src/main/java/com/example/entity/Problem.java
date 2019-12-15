@@ -7,22 +7,22 @@ public class Problem {
   private String textB;
   private String textC;
   private String textD;
-  private boolean isA;
-  private boolean isB;
-  private boolean isC;
-  private boolean isD;
+  private boolean A;
+  private boolean B;
+  private boolean C;
+  private boolean D;
 
   public Problem(){}
-  public Problem(String textMain, String textA, String textB, String textC, String textD, boolean isA, boolean isB, boolean isC, boolean isD) {
+  public Problem(String textMain, String textA, String textB, String textC, String textD, boolean A, boolean B, boolean C, boolean D) {
     this.textMain = textMain;
     this.textA = textA;
     this.textB = textB;
     this.textC = textC;
     this.textD = textD;
-    this.isA = isA;
-    this.isB = isB;
-    this.isC = isC;
-    this.isD = isD;
+    this.A = A;
+    this.B = B;
+    this.C = C;
+    this.D = D;
   }
 
   public int getTid() {
@@ -74,34 +74,50 @@ public class Problem {
   }
 
   public boolean isA() {
-    return isA;
+    return A;
   }
 
-  public void setIsA(boolean a) {
-    isA = a;
+  public void setA(boolean a) {
+    A = a;
   }
 
   public boolean isB() {
-    return isB;
+    return B;
   }
 
-  public void setIsB(boolean b) {
-    isB = b;
+  public void setB(boolean b) {
+    B = b;
   }
 
   public boolean isC() {
-    return isC;
+    return C;
   }
 
-  public void setIsC(boolean c) {
-    isC = c;
+  public void setC(boolean c) {
+    C = c;
   }
 
   public boolean isD() {
-    return isD;
+    return D;
   }
 
-  public void setIsD(boolean d) {
-    isD = d;
+  public void setD(boolean d) {
+    D = d;
+  }
+
+  @Override
+  public String toString() {
+    return "Problem{" +
+            "tid=" + tid +
+            ", textMain='" + textMain + '\'' +
+            ", textA='" + textA + '\'' +
+            ", textB='" + textB + '\'' +
+            ", textC='" + textC + '\'' +
+            ", textD='" + textD + '\'' +
+            ", A=" + A +
+            ", B=" + B +
+            ", C=" + C +
+            ", D=" + D +
+            '}';
   }
 }

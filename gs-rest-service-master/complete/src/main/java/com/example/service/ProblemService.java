@@ -23,7 +23,7 @@ public class ProblemService {
   public List<Problem> getAllProblems(){
     return problemMapper.getAllProblems();
   }
-  public Problem getOneProblem(){
-    return problemMapper.getOneProblem();
+  public Problem getOneProblem(int id){
+    return problemMapper.getOneProblem(id);
   }
 }

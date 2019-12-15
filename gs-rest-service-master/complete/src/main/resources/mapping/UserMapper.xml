@@ -19,9 +19,4 @@
         INSERT INTO `teachingassistant`.`user` (`username`, `password`, `role`) VALUES (#{username},#{password},#{role});
     </insert>
 
-    <insert id="addProblem" parameterType="com.example.entity.Problem">
-        INSERT INTO `teachingassistant`.`problems` (`describeMain`, `op1`, `op2`, `op3`, `op4`, `correct1`, `correct2`, `correct3`, `correct4`) VALUES (#{textMain}, #{textA} , #{textB}, #{textC}, #{textD}, #{isA}, #{isB}, #{isC}, #{isD});
-    </insert>
-
-
 </mapper>

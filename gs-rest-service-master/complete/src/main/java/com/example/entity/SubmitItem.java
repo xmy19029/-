@@ -1,11 +1,11 @@
 package com.example.entity;
 
 public class SubmitItem {
-  private int submitId;
+  private int submitId=0;
   private String username;
   private String timeStamp;
-  private int eid;
-  private int score;
+  private int eid=0;
+  private int score=0;
   private String result;
   private String chosen;
   SubmitItem(){}
@@ -57,6 +57,14 @@ public class SubmitItem {
 
   public void setScore(int score) {
     this.score = score;
+  }
+
+  public String getResult() {
+    return result;
+  }
+
+  public void setResult(String result) {
+    this.result = result;
   }
 
   public String getChosen() {

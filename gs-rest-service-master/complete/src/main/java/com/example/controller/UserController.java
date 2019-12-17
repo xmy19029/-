@@ -23,11 +23,13 @@ public class UserController {
   }
 
   @RequestMapping(value = "register",method = RequestMethod.POST)
-  public String addUser(@RequestParam("name") String userName,@RequestParam("pwd") String password){
+  public String addUser(@RequestParam("name") String userName,@RequestParam("pwd") String password,@RequestParam("role") String role){
     User t = new User();
     t.setUsername(userName);
     t.setPassword(bCryptPasswordEncoder.encode(password));
-    t.setRole("ROLE_USER");
+    int idrole = Integer.parseInt(role);
+    if(idrole==1) t.setRole("ROLE_STUDENT");
+    else t.setRole("ROLE_TEACHER");
     return ""+userService.addUser(t);
   }
 

@@ -4,14 +4,14 @@ public class Reply {
   private int rid;
   private int postId;
   private String username;
-  private String Text;
+  private String text;
   private int replyTo;
   Reply(){}
 
   public Reply(int postId, String username, String text, int replyTo) {
     this.postId = postId;
     this.username = username;
-    Text = text;
+    text = text;
     this.replyTo = replyTo;
   }
 
@@ -40,11 +40,11 @@ public class Reply {
   }
 
   public String getText() {
-    return Text;
+    return text;
   }
 
   public void setText(String text) {
-    Text = text;
+    this.text = text;
   }
 
   public int getReplyTo() {
@@ -61,7 +61,7 @@ public class Reply {
             "rid=" + rid +
             ", postId=" + postId +
             ", username='" + username + '\'' +
-            ", Text='" + Text + '\'' +
+            ", text='" + text + '\'' +
             ", replyTo=" + replyTo +
             '}';
   }

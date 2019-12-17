@@ -23,14 +23,7 @@ public class ExamController {
 
   @RequestMapping("getDetail")
   public List<Problem> getProblemDetail(int eid){
-    Exam exam = examService.getOneExam(eid);
-    String t = exam.getProblemList();
-    List<Integer> plist = ListAdaptor.toList(t);
-    List<Problem> res = new ArrayList<>();
-    for(Integer tmp:plist){
-      res.add(problemService.getOneProblem(tmp));
-    }
-    return res;
+    return examService.getProblemDetail(eid);
   }
 
   @RequestMapping("getAll")

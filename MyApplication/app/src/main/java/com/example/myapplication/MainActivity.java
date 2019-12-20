@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -18,17 +19,32 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.myapplication.connect.connect;
+import com.example.myapplication.data.DBHelper;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class MainActivity extends AppCompatActivity {
     public static Activity instance;
     private SharedPreferences sp;
     private EditText name,password;
     private CheckBox rem,autoLogin;
+    private SQLiteDatabase database;
+    private DBHelper helper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         instance=this;
+        helper=new DBHelper(this,"myDb.db",null,1);
+        database=helper.getWritableDatabase();
         name=findViewById(R.id.editText2);
         password=findViewById(R.id.editText);
         rem=findViewById(R.id.radioButton);
@@ -65,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
                 String u_password=password.getText().toString();
                 Spinner spinner=(Spinner) findViewById(R.id.spinner);
                 String choice=spinner.getSelectedItem().toString();
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        getwebinfo();
+                    }
+                }).start();
                 if(true){//登陆成功
                     if(rem.isChecked()){
                         SharedPreferences.Editor editor=sp.edit();
@@ -112,5 +134,36 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+    private void getwebinfo() {
+        try {
+            //1,找水源--创建URL
+            URL url = new URL("https://www.baidu.com/");//放网站
+            //2,开水闸--openConnection
+            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+            //3，建管道--InputStream
+            InputStream inputStream = httpURLConnection.getInputStream();
+            //4，建蓄水池蓄水-InputStreamReader
+            InputStreamReader reader = new InputStreamReader(inputStream, "UTF-8");
+            //5，水桶盛水--BufferedReader
+            BufferedReader bufferedReader = new BufferedReader(reader);
+
+            StringBuffer buffer = new StringBuffer();
+            String temp = null;
+
+            while ((temp = bufferedReader.readLine()) != null) {
+                //取水--如果不为空就一直取
+                buffer.append(temp);
+            }
+            bufferedReader.close();//记得关闭
+            reader.close();
+            inputStream.close();
+            System.out.println(buffer.toString());
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -30,6 +30,7 @@ public class TeacherMainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Toast.makeText(TeacherMainActivity.this,"",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(TeacherMainActivity.this,ForumMainActivity.class);
+                intent.putExtra("search_info","");
                 startActivity(intent);
             }
         });
@@ -38,7 +39,8 @@ public class TeacherMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(TeacherMainActivity.this,"",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(TeacherMainActivity.this,TeacherScoreActivity.class);
+                Intent intent = new Intent(TeacherMainActivity.this,ScoreManageActivity.class);
+                intent.putExtra("search_info","");
                 startActivity(intent);
             }
         });

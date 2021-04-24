@@ -21,6 +21,7 @@ public class TeacherMainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Toast.makeText(TeacherMainActivity.this,"",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(TeacherMainActivity.this,TeacherQuestionActivity.class);
+                //Intent intent = new Intent(TeacherMainActivity.this,DMTest.class);
                 startActivity(intent);
             }
         });
@@ -52,6 +53,42 @@ public class TeacherMainActivity extends AppCompatActivity {
                Intent intent = new Intent(TeacherMainActivity.this,mineinfo.class);
                startActivity(intent);
            }
+        });
+        ImageButton imageButton7 = (ImageButton)findViewById(R.id.imageButton7);
+        imageButton7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TeacherMainActivity.this,course.class);
+                intent.putExtra("teacher",true);
+                startActivity(intent);
+            }
+        });
+        ImageButton imageButton6 = (ImageButton)findViewById(R.id.imageButton6);
+        imageButton6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TeacherMainActivity.this,OnAirAccess.class);
+                //Intent intent = new Intent(TeacherMainActivity.this,OnAirOpen.class);
+                //intent.putExtra("user_name",getIntent().getStringExtra("user_name"));
+                startActivity(intent);
+            }
+        });
+        ImageButton imageButton8 = (ImageButton)findViewById(R.id.imageButton8);
+        imageButton8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TeacherMainActivity.this,uploadTest.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton imageButton9 = (ImageButton)findViewById(R.id.imageButton9);
+        imageButton9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TeacherMainActivity.this,OnAirOpen.class);
+                intent.putExtra("user_name",getIntent().getStringExtra("user_name"));
+                startActivity(intent);
+            }
         });
     }
 }

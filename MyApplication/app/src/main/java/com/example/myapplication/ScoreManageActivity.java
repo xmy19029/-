@@ -15,18 +15,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.myapplication.bean.Posts;
 import com.example.myapplication.connect.Connect;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 
 
 import java.util.ArrayList;
@@ -169,7 +163,7 @@ public class ScoreManageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ScoreManageActivity.this, ScoreManageActivity.class);
-                String search_info = ((SearchView)findViewById (R.id.searchView)).getQuery().toString() ;
+                String search_info = ((SearchView)findViewById (R.id.searchViewCourse)).getQuery().toString() ;
                 intent.putExtra("search_info",search_info);
                 startActivity(intent);
             }

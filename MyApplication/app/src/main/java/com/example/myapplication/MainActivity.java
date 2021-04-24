@@ -43,10 +43,12 @@ public class MainActivity extends AppCompatActivity {
                 if(msg.obj.equals("ROLE_STUDENT")){
                     sp.edit().putInt("shenfen",1).commit();
                     Intent intent = new Intent(MainActivity.this, main.class);
+                    intent.putExtra("user_name",name.getText().toString());
                     startActivity(intent);
                 }else if(msg.obj.equals("ROLE_TEACHER")){
                     sp.edit().putInt("shenfen",2).commit();
                     Intent intent = new Intent(MainActivity.this, TeacherMainActivity.class);
+                    intent.putExtra("user_name",name.getText().toString());
                     startActivity(intent);
                 }else {
                     Toast.makeText(MainActivity.this,"账号或密码错误！",
@@ -72,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getSupportActionBar() != null){
+            getSupportActionBar().hide();
+        }
         setContentView(R.layout.activity_main);
         u_name=null;
         u_password=null;

@@ -68,5 +68,24 @@ public class main extends Activity {
                         Toast.LENGTH_LONG).show();
             }
         });
+        ImageButton imageButton11 = (ImageButton)findViewById(R.id.imageButton11);
+        imageButton11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(main.this,course.class);
+                intent.putExtra("teacher",false);
+                startActivity(intent);
+            }
+        });
+        ImageButton imageButton12 = (ImageButton)findViewById(R.id.imageButton12);
+        imageButton12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(main.this,OnAirAccess.class);
+                //Intent intent = new Intent(TeacherMainActivity.this,OnAirOpen.class);
+                //intent.putExtra("user_name",getIntent().getStringExtra("user_name"));
+                startActivity(intent);
+            }
+        });
     }
 }

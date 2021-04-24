@@ -7,6 +7,62 @@
     android:background="@mipmap/bg"
     android:orientation="vertical">
 
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="69dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="464dp"
+        android:background="#00FF0000"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/account" />
+
+    <TextView
+        android:id="@+id/textView77"
+        android:layout_width="70dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="160dp"
+        android:text="观看直播"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton1"
+        app:layout_constraintVertical_bias="0.239" />
+
+    <TextView
+        android:id="@+id/textView76"
+        android:layout_width="70dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="160dp"
+        android:text="观看视频"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton1"
+        app:layout_constraintVertical_bias="0.239" />
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="69dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="464dp"
+        android:background="#00FF0000"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/account" />
+
     <TextView
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
@@ -28,14 +84,14 @@
         android:layout_marginStart="57dp"
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="27dp"
-        android:scaleType="centerInside"
-        android:background="#00FF0000"
+        android:background="@mipmap/survey"
         android:foreground="@mipmap/survey"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/textView19"
         app:layout_constraintEnd_toStartOf="@+id/imageButton5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@color/transparent" />
 
     <ImageButton
         android:id="@+id/imageButton0"
@@ -45,14 +101,14 @@
         android:layout_marginTop="183dp"
         android:layout_marginEnd="45dp"
         android:layout_marginBottom="28dp"
+        android:background="@mipmap/note"
+        android:foreground="@color/black"
         android:scaleType="centerInside"
-        android:background="#00FF0000"
-        android:foreground="@mipmap/note"
         app:layout_constraintBottom_toTopOf="@+id/textView17"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@color/transparent" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -61,14 +117,14 @@
         android:layout_marginTop="181dp"
         android:layout_marginEnd="42dp"
         android:layout_marginBottom="28dp"
-        android:scaleType="centerInside"
-        android:background="#00FF0000"
+        android:background="@mipmap/question"
         android:foreground="@mipmap/question"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/textView16"
         app:layout_constraintEnd_toStartOf="@+id/imageButton3"
         app:layout_constraintStart_toEndOf="@+id/imageButton0"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@color/transparent" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -77,14 +133,14 @@
         android:layout_marginTop="181dp"
         android:layout_marginEnd="59dp"
         android:layout_marginBottom="30dp"
-        android:scaleType="centerInside"
-        android:background="#00FF0000"
+        android:background="@mipmap/account"
         android:foreground="@mipmap/account"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@color/transparent" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -92,14 +148,14 @@
         android:layout_height="63dp"
         android:layout_marginEnd="59dp"
         android:layout_marginBottom="27dp"
-        android:scaleType="centerInside"
-        android:background="#00FF0000"
+        android:background="@mipmap/gengduo"
         android:foreground="@mipmap/gengduo"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/textView52"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton5"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@color/transparent" />
 
     <TextView
         android:id="@+id/textView14"
@@ -159,14 +215,14 @@
         android:layout_height="63dp"
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="27dp"
-        android:scaleType="centerInside"
-        android:background="#00FF0000"
+        android:background="@mipmap/test"
         android:foreground="@mipmap/test"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/textView18"
         app:layout_constraintEnd_toStartOf="@+id/imageButton"
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@color/transparent" />
 
     <TextView
         android:id="@+id/textView18"

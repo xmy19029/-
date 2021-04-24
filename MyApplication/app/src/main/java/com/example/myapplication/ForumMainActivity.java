@@ -3,7 +3,6 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,13 +11,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.myapplication.bean.Posts;
 import com.example.myapplication.connect.Connect;
@@ -113,7 +109,7 @@ public class ForumMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ForumMainActivity.this,ForumMainActivity.class);
-                String search_info = ((SearchView)findViewById (R.id.searchView)).getQuery().toString() ;
+                String search_info = ((SearchView)findViewById (R.id.searchViewCourse)).getQuery().toString() ;
                 intent.putExtra("search_info",search_info);
                 startActivity(intent);
             }
